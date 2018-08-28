@@ -35,4 +35,4 @@ jobs:
         
       # run tests!
       - run: yarn test
-      - run: docker-compose up -d
+      - run: docker run selenium/hub
