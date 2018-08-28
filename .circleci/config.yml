@@ -8,9 +8,6 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:8.11.3
-      - image: selenium/hub
-        ports: 4444:4444
-      - image: selenium/node-chrome-debug
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -21,6 +18,9 @@ jobs:
 
     steps:
       - checkout
+
+      - setup_remote_docker:  
+          docker_layer_caching: true
 
       # Download and cache dependencies
       - restore_cache:
