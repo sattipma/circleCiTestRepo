@@ -1,0 +1,17 @@
+{
+    "name": "nodetest",
+    "version": "1.0.0",
+    "description": "testing circleci - just a test",
+    "main": "index.js",
+    "author": "sujasree",
+    "license": "ISC",
+    "devDependencies": {
+        "chai": "~2.3.0",
+        "grunt": "^1.0.3",
+        "load-grunt-tasks": "^4.0.0"
+    },
+    "dependencies": {},
+    "scripts": {
+        "test": "grunt test"
+    }
+}
