@@ -9,8 +9,7 @@ jobs:
       # specify the version you desire here
       - image: circleci/node:8.11.3
       - image: selenium/hub
-           name: seleniumhub
-           ports: 4444:4444
+      - image: selenium/node-chrome-debug
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -38,4 +37,4 @@ jobs:
         
       # run tests!
       - run: yarn test
-      #- run: docker run selenium/hub
+      - run: docker-compose up -d
