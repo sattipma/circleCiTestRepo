@@ -8,6 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:8.11.3
+      - image: selenium/hub
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -35,4 +36,4 @@ jobs:
         
       # run tests!
       - run: yarn test
-      - run: docker run selenium/hub
+      #- run: docker run selenium/hub
