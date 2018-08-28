@@ -9,6 +9,8 @@ jobs:
       # specify the version you desire here
       - image: circleci/node:8.11.3
       - image: selenium/hub
+          ports:
+            - 4444:4444
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
