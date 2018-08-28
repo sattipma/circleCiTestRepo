@@ -19,6 +19,7 @@ jobs:
           links:
             - selenium/hub:hub
       
+      #test
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
