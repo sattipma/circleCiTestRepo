@@ -5,7 +5,7 @@
 version: 2
 jobs:
   build:
-    docker:
+    docker-compose:
       # specify the version you desire here
       - image: circleci/node:8.11.3
       - image: selenium/hub
