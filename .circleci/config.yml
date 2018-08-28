@@ -7,8 +7,11 @@ jobs:
   build:
     docker-compose:
       # specify the version you desire here
-      - image: circleci/node:8.11.3
-      - image: selenium/hub
+      node:
+        - image: circleci/node:8.11.3
+        
+      seleniumhub:  
+        - image: selenium/hub
           - ports:
             - 4444:4444
 
