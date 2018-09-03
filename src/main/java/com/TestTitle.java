@@ -1,6 +1,7 @@
 package com;
 
 import org.testng.annotations.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,17 +18,22 @@ public class TestTitle {
 	private WebDriver driver = null;
 
 	@Test
-	public void testEasy() {
+	public void testAssure() {
 		driver.get("http://assuredev.dequelabs.com/");
 		String title = driver.getTitle();
-		System.out.println(title);
-		
+		System.out.println("Title: "+title);
+		Assert.assertTrue(title.contains("Sign in to Deque"));
+		driver.findElement(By.id("email")).sendKeys("harish");
+		driver.findElement(By.xpath("//button[@type=submit]")).click();
+		driver.findElement(By.id("password-field")).sendKeys("Deque2013");
+		driver.findElement(By.xpath("//button[@type=submit]")).click();
+		title = driver.getTitle();
+		System.out.println("Title: "+title);
+		Assert.assertTrue(title.contains("Home - WorldSpace Assure"));		
 	}
 
 	@BeforeTest
 	public void beforeTest() throws Exception {
-		//System.out.println("property set...");
-		//System.setProperty("webdriver.driver.chrome", "./linuxchrome/chromedriver");
 		System.out.println("starting chrome driver...");
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
 		cap.setCapability("platform", "LINUX");
