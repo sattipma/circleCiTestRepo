@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build:
+  test:
     docker:
       # specify the version you desire here
       - image: circleci/node:8.11.3
@@ -41,7 +41,7 @@ jobs:
       - run: yarn test
       #- run: docker-compose up -d
       #- run: mvn test
-  test:
+  build:
     docker:
       - image: jimador/docker-jdk-8-maven-node
     steps:
