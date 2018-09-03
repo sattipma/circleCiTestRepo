@@ -19,7 +19,7 @@ public class TestTitle {
 
 	@Test
 	public void testAssure() {
-		driver.get("http://assuredev.dequelabs.com/");
+		driver.get("http://qaassure.dequecloud.com");
 		String title = driver.getTitle();
 		System.out.println("Title: "+title);
 		Assert.assertTrue(title.contains("Sign in to Deque"));
