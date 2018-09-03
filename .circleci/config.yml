@@ -39,8 +39,7 @@ jobs:
         
       # run tests!
       - run: yarn test
-      - run: docker-compose up -d
-      - run: java -version
+      #- run: docker-compose up -d
       #- run: mvn test
   test:
     docker:
