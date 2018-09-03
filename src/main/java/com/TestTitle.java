@@ -24,9 +24,9 @@ public class TestTitle {
 		System.out.println("Title: "+title);
 		Assert.assertTrue(title.contains("Sign in to Deque"));
 		driver.findElement(By.id("email")).sendKeys("harish");
-		driver.findElement(By.xpath("//button[@type=submit]")).click();
+		driver.findElement(By.xpath("//*[@id='login-email-section']/form/button")).click();
 		driver.findElement(By.id("password-field")).sendKeys("Deque2013");
-		driver.findElement(By.xpath("//button[@type=submit]")).click();
+		driver.findElement(By.xpath("//*[@id='login-password-section']/form/button")).click();
 		title = driver.getTitle();
 		System.out.println("Title: "+title);
 		Assert.assertTrue(title.contains("Home - WorldSpace Assure"));		
