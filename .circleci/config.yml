@@ -51,7 +51,7 @@ jobs:
       - run:
           name: installing maven
           command: sudo apt-get install maven
-      - run
+      - run:
           name: executing maven test
           command: mvn test
       #- run: docker-compose up -d
