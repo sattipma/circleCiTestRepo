@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  testjob:
+  build:
     docker: # use the docker executor type; machine and macos executors are also supported
       - image: circleci/node:4.8.2 # the primary container, where your job's commands are run
     steps:
@@ -8,9 +8,3 @@ jobs:
       - run: echo "hello world" # run the `echo` command
       - run: echo "i am still running. This is my second statement"
       - run: echo "this is my third statement" #updated on test branch on the second pull
-      # updated in second branch
-      # this is changed in secondbranch in second commit
-      # change in b2c3
-      # change in master c4
-  build:
-    job: testjob
