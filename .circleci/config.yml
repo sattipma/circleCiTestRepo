@@ -9,4 +9,4 @@ jobs:
       - run: echo "i am still running. This is my second statement"
       - run: echo "this is my third statement" 
   build:
-    testjob
+    job: testjob
