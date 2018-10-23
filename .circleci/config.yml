@@ -11,5 +11,6 @@ jobs:
       # updated in second branch
       # this is changed in secondbranch in second commit
       # change in b2c3
+      # change in master c4
   build:
     job: testjob
